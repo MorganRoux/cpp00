@@ -67,11 +67,13 @@ void	Contact::describe()
 		std::cout << "Darkest secret : " << _darkestSecret << "\n";
 }
 
+
 void	Contact::shortPrint()
 {
 	std::cout << "|"  << std::setw(10) << std::to_string(_id);
-	std::cout << "|" << std::setw(10) << _firstName.substr(0,9);
-	std::cout << "|"  << std::setw(10) << _lastName.substr(0,9);
-	std::cout << "|" << std::setw(10) << _nickName.substr(0,9);
+
+	std::cout << "|" << std::setw(10) << (_firstName.size() > 10  ? _firstName.substr(0,9) + "." : _firstName);
+	std::cout << "|"  << std::setw(10) << (_lastName.size() > 10  ? _lastName.substr(0,9) + "." : _lastName);
+	std::cout << "|"  << std::setw(10) << (_nickName.size() > 10  ? _nickName.substr(0,9) + "." : _nickName);
 	std::cout << "|\n";
 }
