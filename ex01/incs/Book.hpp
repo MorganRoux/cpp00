@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 15:03:03 by mroux             #+#    #+#             */
-/*   Updated: 2021/04/26 17:04:35 by mroux            ###   ########.fr       */
+/*   Updated: 2021/04/26 18:04:43 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 # define BOOK_HPP
 # include "Contact.hpp"
 # include <string>
+# include <iomanip>
 # include <iostream>
+# include <stdlib.h>
 
 class Book
 {

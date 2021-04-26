@@ -52,7 +52,7 @@ void	Contact::init(int id)
 }
 void	Contact::describe()
 {
-		std::cout << "Id : " << std::to_string(_id) << "\n";
+		std::cout << "Id : " <<_id << "\n";
 		std::cout << "First name : " << _firstName << "\n";
 		std::cout << "Last name : " << _lastName << "\n";
 		std::cout << "Nick name : " << _nickName << "\n";
@@ -70,7 +70,7 @@ void	Contact::describe()
 
 void	Contact::shortPrint()
 {
-	std::cout << "|" << std::setw(10) << std::to_string(_id);
+	std::cout << "|" << std::setw(10) << _id;
 
 	std::cout << "|" << std::setw(10) << (_firstName.size() > 10  ? _firstName.substr(0,9) + "." : _firstName);
 	std::cout << "|" << std::setw(10) << (_lastName.size() > 10  ? _lastName.substr(0,9) + "." : _lastName);
