@@ -6,11 +6,19 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 15:03:14 by mroux             #+#    #+#             */
-/*   Updated: 2021/04/26 17:16:14 by mroux            ###   ########.fr       */
+/*   Updated: 2021/04/26 17:39:27 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Book.hpp"
+
+bool	isnumber(const char *str)
+{
+	while (*str != 0)
+		if (std::isdigit(*str++) == 0)
+			return (false);
+	return (true);
+}
 
 Book::Book()
 {
@@ -57,5 +65,8 @@ void	Book::search()
 	printContacts();
 	std::cout << "Index ? ";
 	std::getline(std::cin, id);
-	printFullContact(atoi(id.c_str()));
+	if (isnumber(id.c_str()))
+		printFullContact(atoi(id.c_str()));
+	else
+		std::cout << "Error\n";
 }

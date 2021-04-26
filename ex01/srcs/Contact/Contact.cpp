@@ -22,11 +22,6 @@ Contact::~Contact()
 
 }
 
-std::string nom = "Roux";
-std::string prenom = "Morgan";
-std::string pseudo = "morganios";
-std::string id = "1";
-
 void	Contact::init(int id)
 {
 	_id = id;
