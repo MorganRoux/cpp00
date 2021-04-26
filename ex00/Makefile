@@ -2,13 +2,13 @@ NAME		=	ex00
 
 SRCS		=	megaphone.cpp
 
-OBJS		=	$(SRCS:.c=.o)
+OBJS		=	$(SRCS:.cpp=.o)
 CC			=	clang++
 FLAGS		=	-Wall -Wextra -Werror -std=c++98
 COMPILE		=	$(CC) $(FLAGS)
 
-%.o : %.c
-			$(CC) $(FLAGS) -c $<  -o $(<:.c=.o)
+%.o : %.cpp
+			$(CC) $(FLAGS) -c $<  -o $(<:.cpp=.o)
 
 all:		$(NAME)
 
