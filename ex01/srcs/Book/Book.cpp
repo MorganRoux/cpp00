@@ -6,7 +6,7 @@
 /*   By: mroux <mroux@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 15:03:14 by mroux             #+#    #+#             */
-/*   Updated: 2021/04/26 18:01:18 by mroux            ###   ########.fr       */
+/*   Updated: 2021/05/29 13:44:59 by mroux            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	Book::printContacts()
 
 void	Book::printFullContact(int id)
 {
-	if (id >= _numberOfContact)
+	if (id >= _numberOfContact || id < 0)
 	{
 		std::cout << "Index inconnu\n";
 		return ;
